@@ -1,0 +1,545 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>com.github.kylebelt.alfred-emoji</string>
+	<key>category</key>
+	<string>Tools</string>
+	<key>connections</key>
+	<dict>
+		<key>05450F7C-3D4F-45BF-ACA3-9422EF54EFDD</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>AEDE6F2A-3933-4CB6-9F5B-0D53DDFE79BA</string>
+				<key>modifiers</key>
+				<integer>1048576</integer>
+				<key>modifiersubtext</key>
+				<string>Paste {query} into frontmost application</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>7521B349-C1D6-4186-B21E-8EAC41BD18F3</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>E577A252-59CC-4971-9A6E-90F0C02DC35E</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>5A54554C-598A-41C6-B0D9-62046CEFB1AD</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>F5CA3331-1B99-45EF-8E9A-06C417387250</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>69116487-E1CC-4FAE-BBFC-7904198F317B</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>05450F7C-3D4F-45BF-ACA3-9422EF54EFDD</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>7521B349-C1D6-4186-B21E-8EAC41BD18F3</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>AEDE6F2A-3933-4CB6-9F5B-0D53DDFE79BA</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>AEDE6F2A-3933-4CB6-9F5B-0D53DDFE79BA</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>F5CA3331-1B99-45EF-8E9A-06C417387250</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>E577A252-59CC-4971-9A6E-90F0C02DC35E</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>5A54554C-598A-41C6-B0D9-62046CEFB1AD</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>F36CDFFD-4057-4FF1-965B-4379AE4B8D90</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>05450F7C-3D4F-45BF-ACA3-9422EF54EFDD</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>F5CA3331-1B99-45EF-8E9A-06C417387250</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>1D0D1E18-E012-4940-B2FC-E26AF179F43C</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>Caio Corrêa</string>
+	<key>description</key>
+	<string>Copy emoji to the clipboard</string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>Emoji Search</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>autopaste</key>
+				<true/>
+				<key>clipboardtext</key>
+				<string>{query}</string>
+				<key>ignoredynamicplaceholders</key>
+				<false/>
+				<key>transient</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>AEDE6F2A-3933-4CB6-9F5B-0D53DDFE79BA</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>action</key>
+				<integer>0</integer>
+				<key>argument</key>
+				<integer>0</integer>
+				<key>focusedappvariable</key>
+				<false/>
+				<key>focusedappvariablename</key>
+				<string></string>
+				<key>hotkey</key>
+				<integer>6</integer>
+				<key>hotmod</key>
+				<integer>1703936</integer>
+				<key>hotstring</key>
+				<string>Z</string>
+				<key>leftcursor</key>
+				<false/>
+				<key>modsmode</key>
+				<integer>0</integer>
+				<key>relatedAppsMode</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.hotkey</string>
+			<key>uid</key>
+			<string>F36CDFFD-4057-4FF1-965B-4379AE4B8D90</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>inputstring</key>
+				<string>{var:snippetapp}</string>
+				<key>matchcasesensitive</key>
+				<true/>
+				<key>matchmode</key>
+				<integer>1</integer>
+				<key>matchstring</key>
+				<string></string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.filter</string>
+			<key>uid</key>
+			<string>7521B349-C1D6-4186-B21E-8EAC41BD18F3</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string></string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string>update.py</string>
+				<key>type</key>
+				<integer>8</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>F5CA3331-1B99-45EF-8E9A-06C417387250</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>keyword</key>
+				<string>emo</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>Loading results...</string>
+				<key>script</key>
+				<string></string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string>emoji.py</string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string>Search emoji</string>
+				<key>type</key>
+				<integer>8</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>05450F7C-3D4F-45BF-ACA3-9422EF54EFDD</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<true/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>{query}</string>
+				<key>title</key>
+				<string>Emoji Search Update</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>1D0D1E18-E012-4940-B2FC-E26AF179F43C</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>focusedappvariable</key>
+				<true/>
+				<key>focusedappvariablename</key>
+				<string>snippetapp</string>
+				<key>keyword</key>
+				<string>emo</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.snippet</string>
+			<key>uid</key>
+			<string>69116487-E1CC-4FAE-BBFC-7904198F317B</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>autopaste</key>
+				<false/>
+				<key>clipboardtext</key>
+				<string>{query}</string>
+				<key>ignoredynamicplaceholders</key>
+				<false/>
+				<key>transient</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>5A54554C-598A-41C6-B0D9-62046CEFB1AD</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>inputstring</key>
+				<string>{var:snippetapp}</string>
+				<key>matchcasesensitive</key>
+				<true/>
+				<key>matchmode</key>
+				<integer>0</integer>
+				<key>matchstring</key>
+				<string></string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.filter</string>
+			<key>uid</key>
+			<string>E577A252-59CC-4971-9A6E-90F0C02DC35E</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string># alfred-emoji
+
+![icon](images/icon.png)
+
+An Alfred workflow that makes it easy to
+search for emoji and copy them to the clipboard 🤘.
+
+## Installing
+
+On first run the workflow downloads emoji data and generates icons automatically.
+
+A progress indicator shows in Alfred while this is happening — results appear
+once setup is complete.
+
+![install](images/install.png)
+
+## Usage
+
+```
+emoji [query]
+```
+
+* ↵ (return) - Copy the emoji symbol (e.g. 🤣) to the clipboard
+* ⌥↵ (alt + return) - Copy the emoji code (e.g. `:rofl:`) to the clipboard
+* ⌃↵ (ctrl + return) - Copy the codepoint (e.g. `U+1F923`) to the clipboard
+* ⇧↵ (shift + return) - Copy the base symbol without skin tone modifier
+
+### Hotkey and snippet triggers
+
+You can also trigger the workflow without typing the `emo` keyword:
+
+- **Hotkey** — bind a keyboard shortcut in Alfred preferences. Activates the
+  search directly, same as typing the keyword.
+- **Snippet** — configure a text snippet shortcut in Alfred preferences. When
+  triggered this way, pressing ↵ **pastes** the emoji directly into the
+  frontmost application instead of copying it to the clipboard (same as the
+  command modifier when using hotkey/keyword.
+
+### Skin tone
+
+Set the `skin_tone` workflow variable in the combo box to the left.
+
+The ⇧ modifier always copies the base symbol regardless of the skin tone setting.
+
+## Automatic Updates
+
+The workflow checks for new releases once weekly and installs them
+automatically. All downloads come directly from official GitHub Releases.
+
+Emoji data kept up to date: the workflow checks for upstream changes to
+[emojilib](https://github.com/muan/emojilib) and [unicode-emoji-json](https://github.com/muan/unicode-emoji-json)
+ weekly and regenerates icons when new emoji are published.
+
+## License
+
+[MIT License](https://kylebelt.mit-license.org)</string>
+	<key>uidata</key>
+	<dict>
+		<key>05450F7C-3D4F-45BF-ACA3-9422EF54EFDD</key>
+		<dict>
+			<key>xpos</key>
+			<real>270</real>
+			<key>ypos</key>
+			<real>180</real>
+		</dict>
+		<key>1D0D1E18-E012-4940-B2FC-E26AF179F43C</key>
+		<dict>
+			<key>xpos</key>
+			<real>980</real>
+			<key>ypos</key>
+			<real>180</real>
+		</dict>
+		<key>5A54554C-598A-41C6-B0D9-62046CEFB1AD</key>
+		<dict>
+			<key>xpos</key>
+			<real>550</real>
+			<key>ypos</key>
+			<real>260</real>
+		</dict>
+		<key>69116487-E1CC-4FAE-BBFC-7904198F317B</key>
+		<dict>
+			<key>xpos</key>
+			<real>50</real>
+			<key>ypos</key>
+			<real>260</real>
+		</dict>
+		<key>7521B349-C1D6-4186-B21E-8EAC41BD18F3</key>
+		<dict>
+			<key>xpos</key>
+			<real>450</real>
+			<key>ypos</key>
+			<real>130</real>
+		</dict>
+		<key>AEDE6F2A-3933-4CB6-9F5B-0D53DDFE79BA</key>
+		<dict>
+			<key>note</key>
+			<string>Auto Paste</string>
+			<key>xpos</key>
+			<real>550</real>
+			<key>ypos</key>
+			<real>100</real>
+		</dict>
+		<key>E577A252-59CC-4971-9A6E-90F0C02DC35E</key>
+		<dict>
+			<key>xpos</key>
+			<real>450</real>
+			<key>ypos</key>
+			<real>290</real>
+		</dict>
+		<key>F36CDFFD-4057-4FF1-965B-4379AE4B8D90</key>
+		<dict>
+			<key>xpos</key>
+			<real>50</real>
+			<key>ypos</key>
+			<real>100</real>
+		</dict>
+		<key>F5CA3331-1B99-45EF-8E9A-06C417387250</key>
+		<dict>
+			<key>note</key>
+			<string>Auto Update - remove to disable</string>
+			<key>xpos</key>
+			<real>820</real>
+			<key>ypos</key>
+			<real>180</real>
+		</dict>
+	</dict>
+	<key>userconfigurationconfig</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<string></string>
+				<key>pairs</key>
+				<array>
+					<array>
+						<string>👍</string>
+						<string></string>
+					</array>
+					<array>
+						<string>👍🏻</string>
+						<string>0</string>
+					</array>
+					<array>
+						<string>👍🏼</string>
+						<string>1</string>
+					</array>
+					<array>
+						<string>👍🏽</string>
+						<string>2</string>
+					</array>
+					<array>
+						<string>👍🏾</string>
+						<string>3</string>
+					</array>
+					<array>
+						<string>👍🏿</string>
+						<string>4</string>
+					</array>
+					<array>
+						<string>Random</string>
+						<string>random</string>
+					</array>
+				</array>
+			</dict>
+			<key>description</key>
+			<string>Set skin tone for human centric emoji</string>
+			<key>label</key>
+			<string>Skin Tone</string>
+			<key>type</key>
+			<string>popupbutton</string>
+			<key>variable</key>
+			<string>skin_tone</string>
+		</dict>
+	</array>
+	<key>version</key>
+	<string>1.0.0</string>
+	<key>webaddress</key>
+	<string>https://github.com/kylebelt/alfred-emoji</string>
+</dict>
+</plist>
