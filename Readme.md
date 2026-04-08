@@ -1,109 +1,95 @@
 # alfred-emoji
 
-[![Build Status](https://travis-ci.org/jsumners/alfred-emoji.svg?branch=master)](https://travis-ci.org/jsumners/alfred-emoji)
+![icon](images/icon.png)
 
-An [Alfred workflow][alfred] that makes it easy to search for emoji and copy
-them to the clipboard 🤘.
+An [Alfred workflow](https://alfredapp.com/) that makes it easy to search for
+emoji and copy them to the clipboard 🤘.
+
+Rewritten in Python, forked from the [original](https://github.com/jsumners/alfred-emoji)
+by [James Sumners](https://github.com/jsumners).
 
 ![screenshot](images/screenshot.png)
 
-> ## Note About Available Emoji
->
-> The workflow is built against the latest available macOS within the GitHub
-> continuous integration infrastructure. This means some emoji may be missing
-> until the GitHub infrastructure is updated. It also means that some emoji
-> may be present in the workflow that do not exist on your system if your
-> system is running an earlier version of macOS.
->
-> If this is not desired, follow the instructions below for generating the
-> workflow on your own system.
+## Installing
 
-## Installing the Workflow
+[Download the workflow from GitHub Releases][releases].
 
-[Download the provided Alfred workflow][releases].
+On first run the workflow downloads emoji data and generates icons automatically.
+A progress indicator shows in Alfred while this is happening — results appear
+once setup is complete.
 
-Notice: This workflow relies on JXA (JavaScript for Automation) that is built
-into macOS.
+The generated emoji data and icons are stored in Alfred's Workflow Data directory
+(`~/Library/Application Support/Alfred/Workflow Data/com.github.ccaio.alfred-emoji/`).
+
+![install](images/install.png)
 
 ## Usage
 
+```bash
+emo [query]
 ```
-emoji [query]
-```
 
-Press <kbd>return</kbd> (↵): **Copy the symbol** of the selected emoji (e.g. 🤣) to
-your clipboard.
+| Key | Action |
+| --- | --- |
+| ↵ return | Copy the emoji symbol (e.g. 🤣) to the clipboard |
+| ⌥↵ alt+return | Copy the emoji code (e.g. `:rofl:`) to the clipboard |
+| ⌃↵ ctrl+return | Copy the codepoint (e.g. `U+1F923`) to the clipboard |
+| ⇧↵ shift+return | Copy the base symbol without skin tone modifier |
 
-Press <kbd>alt</kbd>+<kbd>return</kbd> (⌥↵): **Copy the code** of the selected emoji)
-(e.g. `:rofl:`) to your clipboard.
+### Hotkey and snippet triggers
 
-Press <kbd>ctrl</kbd>+<kbd>return</kbd> (⌃↵): **Copy the codepoint** **of** the selected emoji)
-(e.g. `U+1F923`) to your clipboard.
+You can also trigger the workflow without typing the `emo` keyword:
 
-Press <kbd>shift</kbd>+<kbd>return</kbd> (⇧↵): **Copy the default symbol** of the selected emoji)
-(e.g. 🤣) to your clipboard without skin tone modifier.
+- **Hotkey** — bind a keyboard shortcut in Alfred preferences. Activates the
+  search directly, identical to typing the keyword.
+- **Snippet** — configure a text snippet shortcut in Alfred preferences. When
+  triggered this way, pressing ↵ **pastes** the emoji directly into the
+  frontmost application instead of copying it to the clipboard.
 
-Press <kbd>cmd</kbd>+<kbd>return</kbd> (⌘↵): **Paste the symbol** of the selected
-emoji (e.g. 🤣) directly to your frontmost application.
+### Skin tone
 
-### Set skin tone
+Set the `skin_tone` workflow variable in Alfred preferences:
 
-To change the emoji skin tone for supported emoji set the `skin_tone` environment variable in Alfred:
+| Value | Result |
+| --- | --- |
+| _(empty)_ | 👍 default |
+| `0` | 👍🏻 |
+| `1` | 👍🏼 |
+| `2` | 👍🏽 |
+| `3` | 👍🏾 |
+| `4` | 👍🏿 |
+| `random` | random tone each time |
 
-![screenshot skin tone settings](images/screenshot-skin-tone-setting.png)
+The ⇧ modifier always copies the base symbol regardless of the skin tone setting.
 
-Options:
-- No value => 👍
-- `0` => 👍🏻
-- `1` => 👍🏼
-- `2` => 👍🏽
-- `3` => 👍🏾
-- `4` => 👍🏿
-- `random` => 👍🏻 | 👍🏼 | 👍🏽 | 👍🏾 | 👍🏿
-
-After setting skin tone you can still quickly copy the default emoji with the <kbd>shift</kbd> modifier.
+![skin_tone](images/skin_tone.png)
 
 ## Automatic Updates
 
-This workflow will automatically check for updates at most once per day. If a
-new release is found, it automatically downloads and installs the latest
-version of the workflow. All downloads come directly from official [GitHub
-releases][releases].
+The workflow checks for new releases once per week and installs them
+automatically. All downloads come from [GitHub releases][releases].
 
-## Optional Hotkey and Snippet Triggers
+Emoji data is also kept up to date: the workflow checks [emojilib](https://github.com/muan/emojilib)
+and [unicode-emoji-json](https://github.com/muan/unicode-emoji-json) for
+upstream changes weekly and regenerates icons when new emoji are published.
 
-Trigger the workflow with either a custom hotkey or a custom snippet.
+## Building
 
-## Building the Workflow
+Requires Python 3.9.6 or later. Install dev dependencies first:
 
-1. Clone this repository
-2. `npm install`
-3. `npm run build`
+```bash
+pip install -r requirements.txt
+```
 
-Note: Node.js >= 20 is required.
+Then package the workflow:
 
-## Loading the Workflow into Alfred
-
-1. `npm run load`
-
-## Inspiration
-
-This is based on the original work by [Carlos Galdino][carlos]. His project
-seems to be unmaintained (some emoji don't copy and some newer are missing).
-Whereas his project is based on the Ruby language, this one is based on
-JavaScript.
-
-## Other
-
-* [Associated Alfred Forum Post][alfredforum]
-* [Emoji Keyword Library][emojilib]
+```bash
+python packager.py <version>             # creates alfred-emoji-<version>.alfredworkflow
+python packager.py <version> --release   # also publishes a GitHub release via gh CLI
+```
 
 ## License
 
-[MIT License](http://jsumners.mit-license.org/)
+[MIT License](http://kylebelt.mit-license.org/)
 
-[alfred]: https://alfredapp.com/
-[carlos]: https://github.com/carlosgaldino/alfred-emoji-workflow/
-[releases]: https://github.com/jsumners/alfred-emoji/releases
-[alfredforum]: https://www.alfredforum.com/topic/11126-alfred-emoji-search-emojis-by-name-or-keyword/
-[emojilib]: https://github.com/muan/emojilib
+[releases]: https://github.com/kylebelt/alfred-emoji/releases
