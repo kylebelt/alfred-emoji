@@ -6,6 +6,6 @@ __pycache__/
 .pytest_cache/
 .ruff_cache/
 .git/
-.github/
+.github
 .DS_Store
 AGENTS.md
