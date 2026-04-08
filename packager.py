@@ -2,10 +2,11 @@
 """Alfred Emoji Workflow Packager.
 
 Packages src/ into an .alfredworkflow zip archive.
+Version is read directly from src/info.plist.
 
 Usage:
-    python packager.py <version>             # build only
-    python packager.py <version> --release   # build + create GitHub release via gh
+    python packager.py            # build only
+    python packager.py --release  # build + create GitHub release via gh
 """
 
 from __future__ import annotations
@@ -95,27 +96,23 @@ def build_workflow_zip(output_path: Path, plist_data: dict[str, Any]) -> None:
 
 
 def main() -> None:
-    args = sys.argv[1:]
-    release_flag = "--release" in args
-    positional = [a for a in args if not a.startswith("--")]
-
-    if not positional:
-        log("Usage: python packager.py <version> [--release]", error=True)
-        sys.exit(1)
-
-    version = positional[0]
+    release_flag = "--release" in sys.argv[1:]
 
     if not INFO_PLIST.exists():
         log(f"info.plist not found at {INFO_PLIST}", error=True)
         sys.exit(1)
 
+    plist_data = read_plist(INFO_PLIST)
+    version = plist_data.get("version", "")
+    if not version:
+        log("version key missing or empty in info.plist", error=True)
+        sys.exit(1)
+
     print(f"Packaging alfred-emoji v{version}")
 
     log("Preparing info.plist", step=True)
-    plist_data = read_plist(INFO_PLIST)
-    plist_data["version"] = version
     clear_exported_variables(plist_data)
-    log("Version injected, variables sanitized")
+    log("Variables sanitized")
 
     log("Building .alfredworkflow", step=True)
     output_path = REPO_ROOT / f"alfred-emoji-{version}.alfredworkflow"
