@@ -119,6 +119,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>F5CA3331-1B99-45EF-8E9A-06C417387250</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>1D0D1E18-E012-4940-B2FC-E26AF179F43C</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 	</dict>
 	<key>createdby</key>
 	<string>Caio Corrêa</string>
@@ -274,6 +287,27 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<true/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>{query}</string>
+				<key>title</key>
+				<string>Emoji Search Update</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>1D0D1E18-E012-4940-B2FC-E26AF179F43C</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>focusedappvariable</key>
 				<true/>
 				<key>focusedappvariablename</key>
@@ -390,6 +424,13 @@ Emoji data kept up to date: the workflow checks for upstream changes to
 		<dict>
 			<key>xpos</key>
 			<real>270</real>
+			<key>ypos</key>
+			<real>180</real>
+		</dict>
+		<key>1D0D1E18-E012-4940-B2FC-E26AF179F43C</key>
+		<dict>
+			<key>xpos</key>
+			<real>980</real>
 			<key>ypos</key>
 			<real>180</real>
 		</dict>

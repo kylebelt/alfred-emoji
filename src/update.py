@@ -98,6 +98,7 @@ def main() -> None:
         print("No .alfredworkflow asset found in latest release", file=sys.stderr)
         sys.exit(1)
 
+    print(f"New version found, downloading and installing {remote_version}.")
     download_and_install(download_url)
     touch_timestamp(dd)
 
